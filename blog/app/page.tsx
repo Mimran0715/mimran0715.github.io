@@ -1,6 +1,6 @@
 import { BlogPosts } from 'app/components/posts'
 import Image from 'next/image';
-import styles from './styles.module.css'; // Adjust the path to match your CSS file location
+import './global.css' // Adjust the path to match your CSS file location
 
 export default function Page() {
   return (
@@ -21,7 +21,6 @@ export default function Page() {
       <Image
      src="/nextjs-github-pages/vercel.svg"
      alt="Vercel Logo"
-     className={styles.vercelLogo}
      width={100}
      height={24}
      priority

@@ -1,5 +1,8 @@
 {
   "private": true,
+  "name": "nextjs-portfolio-starter",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,14 +15,20 @@
     "@types/react-dom": "18.2.19",
     "@vercel/analytics": "^1.1.3",
     "@vercel/speed-insights": "^1.0.9",
+    "autoprefixer": "^10.4.20",
+    "css-loader": "^7.1.2",
     "geist": "1.2.2",
     "next": "canary",
     "next-mdx-remote": "^4.4.1",
     "postcss": "^8.4.35",
+    "postcss-loader": "^8.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sugar-high": "^0.6.0",
     "tailwindcss": "4.0.0-alpha.13",
     "typescript": "5.3.3"
+  },
+  "devDependencies": {
+    "style-loader": "^4.0.0"
   }
 }

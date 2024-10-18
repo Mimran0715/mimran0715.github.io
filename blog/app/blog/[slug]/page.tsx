@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation'
+import NotFound from 'app/components/not-found';
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
@@ -55,7 +55,7 @@ export default function Blog({ params }) {
   let post = getBlogPosts().find((post) => post.slug === params.slug)
 
   if (!post) {
-    notFound()
+    return <NotFound />;
   }
 
   return (

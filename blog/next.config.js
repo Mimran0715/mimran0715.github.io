@@ -12,7 +12,7 @@ const nextConfig = {
      *
      * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
      */
-    basePath: "/nextjs-github-pages",
+    basePath: "/mimran0715/github.io",
   
     /**
      * Disable server-based image optimization. Next.js does not support
@@ -22,6 +22,22 @@ const nextConfig = {
      */
     images: {
       unoptimized: true,
+    },
+    webpack: (config) => {
+      config.module.rules.push({
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          'postcss-loader',
+        ],
+      });
+      return config;
     },
   };
   
